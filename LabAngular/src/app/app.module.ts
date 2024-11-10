@@ -9,6 +9,9 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { PublicMenuComponent } from './common/public-menu/public-menu.component';
 import { PrivateMenuComponent } from './common/private-menu/private-menu.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { PrivateMenuComponent } from './common/private-menu/private-menu.compone
     HeaderComponent,
     FooterComponent,
     PublicMenuComponent,
-    PrivateMenuComponent
+    PrivateMenuComponent,
+    HomeComponent,
+    LoginComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

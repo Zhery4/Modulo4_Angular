@@ -1,0 +1,27 @@
+@import '/src/app/styles/variables.scss';
+.header-container{
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo{
+    height: 48px;
+    width: 48px;
+}
+.title{
+    font-size: 48px;
+}

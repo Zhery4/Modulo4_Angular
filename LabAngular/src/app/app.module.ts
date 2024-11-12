@@ -16,6 +16,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { CrudComponent } from './pages/crud/crud.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -31,14 +32,15 @@ import { ProfileComponent } from './pages/profile/profile.component';
     DashboardComponent,
     GalleryComponent,
     CrudComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

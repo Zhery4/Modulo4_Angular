@@ -5,3 +5,23 @@
     margin: 0;
 }
 
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-content{
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+}

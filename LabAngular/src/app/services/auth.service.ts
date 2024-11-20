@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, delay } from 'rxjs';
 export interface IUser {
   username: string;
   password: string;
@@ -14,14 +15,18 @@ export class AuthService {
 
   constructor() {}
 
-  login = (user: IUser): boolean => {
+  login = (user: IUser): Observable<boolean> => {
+    let value: boolean = false;
     user.username === this.USERNAME_KEY &&
       user.password === this.PASSWORD_KEY &&
-      (this.isLoggedIn = true);
-    return this.isLoggedIn;
+      (value = true);
+
+    return of(value).pipe(delay(2000));
   };
 
-  isLogged = () => this.isLoggedIn;
+  isLogged = () => {
+    return this.isLoggedIn;
+  };
 
   logout = () => {
     this.isLoggedIn = false;

@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+  isLoading = false;
   constructor(
     private readonly service: AuthService,
     private readonly router: Router
@@ -20,12 +21,14 @@ export class LoginComponent {
   });
 
   login = () => {
+    this.isLoading = true;
     if (this.loginForm.valid) {
       const username = this.loginForm.get('username')?.value ?? '';
       const password = this.loginForm.get('password')?.value ?? '';
-      this.service.login({ username, password })
-        ? this.router.navigate(['/dashboard'])
-        : alert('Invalid credentials');
+      this.service.login({ username, password }).subscribe((e) => {
+        e ? this.router.navigate(['/dashboard']) : alert('Invalid credentials');
+        this.isLoading = false;
+      });
     }
   };
 }

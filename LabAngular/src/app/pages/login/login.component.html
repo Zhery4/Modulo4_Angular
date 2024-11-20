@@ -14,3 +14,8 @@
         <button mat-raised-button color="primary" (click)="login()">Login</button>
     </form>
 </div>
+<div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="48">
+
+    </mat-spinner>
+</div>

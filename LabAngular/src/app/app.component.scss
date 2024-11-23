@@ -1,8 +1,8 @@
-@import url(./styles/variables.scss);
+@import '/src/app/styles/variables.scss';
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
 .app-layout {
@@ -15,13 +15,13 @@
     display: flex;
     flex: 1;
     padding: 20px;
-    background-color: #999;
-
+    background-color: $secondary-color;
 }
 
 .content{
     display: flex;
     flex: 1;
     padding: 20px;
-    background-color: #999;
+    
 }
+

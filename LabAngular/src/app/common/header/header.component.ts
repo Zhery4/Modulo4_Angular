@@ -8,8 +8,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent {
   isAuthenticated: boolean = false;
+  service: AuthService;
 
-  constructor(private readonly authService: AuthService) {
-    this.isAuthenticated = this.authService.isLogged();
+  constructor(authService: AuthService) {
+    this.service = authService;
   }
 }

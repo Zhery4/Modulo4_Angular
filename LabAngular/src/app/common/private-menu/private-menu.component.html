@@ -3,4 +3,6 @@
     <button routerLink="/gallery" mat-button color="secondary">Gallery</button>
     <button routerLink="/crud" mat-button color="secondary">Crud</button>
     <button routerLink="/profile" mat-button color="secondary">Profile</button>
+    <button routerLink="/" (click)="authService.logout()" mat-button color="secondary">Logout</button>
+    <span>{{authService.getUsername()}}</span>
 </div>
